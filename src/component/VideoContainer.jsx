@@ -33,11 +33,19 @@ const VideoContainer = () => {
         getVideos()
     }, [])
 
-    
+ if(!videosFromStore) return <h1>Loading</h1>
+
     return (
-        <div>
+        <div className="flex flex-wrap">
             {/* ADDING THE CONDITIONAL RENDERING TO SOLVE THE ERROR FOR UNDFINED DATA */}
-            {videosFromStore[0]? <VideoCard  info={videosFromStore[0]}/> : <p className="text-center justify-center flex items-center">Loading</p>}
+
+
+            {videosFromStore.map((video,id)=>{
+                return <VideoCard  key={id}info={video}/>
+            }
+              
+            )}
+            {/* {videosFromStore[0]? <VideoCard  info={videosFromStore[0]}/> : <p className="text-center justify-center flex items-center">Loading</p>} */}
         </div>
     )
 }

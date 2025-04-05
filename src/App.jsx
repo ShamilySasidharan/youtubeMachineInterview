@@ -12,7 +12,7 @@ function App() {
     <Provider store={appStore}>
       <div>
       <Header className="text-bold" />
-      <Body />
+      <Body />``
       </div>
      
     </Provider>
