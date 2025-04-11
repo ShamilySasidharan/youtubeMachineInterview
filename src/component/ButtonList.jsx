@@ -5,7 +5,7 @@ const ButtonList = () => {
 
 
     return (
-        <div className="overflow-x-auto max-w-screen">
+       <div className="overflow-x-auto max-w-screen">
       <div className="flex gap-3 p-3 text-center items-center flex-nowrap w-96 scrollbar-hide">
         {buttonList.map((list, index) => (
           <button 

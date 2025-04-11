@@ -1,16 +1,11 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "./utils/menuSlice";
-
-
-
 const Header = () => {
  const dispatch = useDispatch()
  const toggleSideMenu = ()=>{
   dispatch(toggleMenu())
  }
-
-
     return (
       <div className="grid grid-cols-[1fr_2fr_1fr] shadow-xl my-1 px-1  py-6 items-center  justify-between ">
         
@@ -33,7 +28,7 @@ const Header = () => {
         {/* Right section: Create button, Notification, User icon */}
         <div className="flex items-center gap-1 justify-end">
           <button className=" text-black px-3 py-1 rounded-full border ">+ Create</button>
-          <img className="w-10 h-10" alt="notification" src="https://www.citypng.com/public/uploads/preview/black-youtube-bell-notification-icon-701751695135877fkcswqnkez.png"/>
+          <img className="w-10 h-10 mx-1" alt="notification" src="https://www.citypng.com/public/uploads/preview/black-youtube-bell-notification-icon-701751695135877fkcswqnkez.png"/>
           <img className="w-10 h-10 object-cover" alt="user_logo" src="https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png"/>
         </div>
   

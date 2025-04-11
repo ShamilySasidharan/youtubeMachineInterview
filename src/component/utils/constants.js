@@ -9,3 +9,23 @@ const API_KEY = 'AIzaSyBdfPHWry0FXUKNY0etgJSPCcC_XrOvOUw'
 export const YOUTUBE_API = 'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key='+ API_KEY
 
 
+export function isPrime(num) {
+    if (num <= 1) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+      if (num % i === 0) return false;
+    }
+    return true;
+  }
+  
+  export function findNthPrime(n) {
+    let count = 0;
+    let num = 2;
+    while (count < n) {
+      if (isPrime(num)) {
+        count++;
+      }
+      num++;
+    }
+    return num - 1;
+  }
+  
