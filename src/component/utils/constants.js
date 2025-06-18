@@ -29,3 +29,5 @@ export function isPrime(num) {
     return num - 1;
   }
   
+
+  export const YOUTUBE_SEARCHSUGGESTIONS_API = "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q="

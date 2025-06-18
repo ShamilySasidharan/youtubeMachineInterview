@@ -30,4 +30,22 @@ const VideoCard = ({info}) => {
       );
     };
 
+  
 export default VideoCard
+
+// export const  HOCAd = ({info})=>{
+// return (
+//   <div className='text-bold border border-amber-500'>
+//     <VideoCard info={info}  />
+//   </div>
+// )
+// }
+
+
+export const HOCAd  =  (WrappedComponent)=>{
+  return (props)=>(
+    <div className='border border-amber-500'>
+      <WrappedComponent {...props}/>
+    </div>
+  )
+}
