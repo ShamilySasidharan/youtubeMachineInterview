@@ -45,7 +45,7 @@ function App() {
     // </Provider>
     <BrowserRouter basename='/'>
       <Provider store={appStore}>
-        <div>
+        <div className='min-h-screen'>
           <Header className="text-bold" />
           <Routes>
             <Route path="/" element={<Body />}>

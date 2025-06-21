@@ -10,8 +10,8 @@ const VideoCard = ({info}) => {
 
       return (
         <div className='flex cursor-pointer'>
-        <div className="video-card m-4 shadow-xl w-80 py-2 rounded-2xl ">
-          <img src={thumbnails.medium.url} alt="Thumbnail" className=' rounded-2xl p-1' />
+        <div className="video-card mx-4 my-1 shadow-xl w-60 py-2 rounded-2xl xl:min-w-80 ">
+          <img src={thumbnails.medium.url} alt="Thumbnail" className=' rounded-xl p-1' />
           <ul>
             <li  className='font-bold mx-2 p-1  text-sm'>
             {title}

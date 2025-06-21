@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import { findNthPrime } from "./utils/constants"
 import { Outlet } from 'react-router'
 
-
-
 const Demo = () => {
     // for input field
     const [num, setNum] = useState(0)

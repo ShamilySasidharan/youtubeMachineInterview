@@ -11,6 +11,7 @@ const VideoContainer = () => {
 
     // 4. subscribing to the store to get  the data from the store
     const videosFromStore = useSelector((store) => store?.videos)
+    
 
     //  1. fetch the data using the fetch/axios
     const getVideos = async () => {
@@ -45,9 +46,10 @@ const VideoContainer = () => {
 
             {/* HOC FOR LEARNING */}
 
-         {videosFromStore[0]&& <VideoCardWithAd info={videosFromStore[0]} /> }  
+            {videosFromStore[0]&& <VideoCardWithAd info={videosFromStore[0]} /> }  
  
             {videosFromStore.map((video, id) => {
+                // This wraps each VideoCard in a React Router Link, which turns the entire video card into a clickable link.
                 return <Link to={"/watch?v=" + video.id} key={id} ><VideoCard info={video} className=""/></Link>
             }
 

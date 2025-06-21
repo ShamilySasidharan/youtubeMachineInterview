@@ -15,11 +15,11 @@ const Body = ()=>{
     //     <Outlet />
       
     // </div>
-    <div className="flex bg-gray-200 h-screen overflow-hidden ">
+    <div className="flex bg-gray-200 h-screen overflow-hidden fixed w-full ">
     <SideBar />
   
-    <div className="flex-1 h-full overflow-hidden ">
-      <div className="h-full overflow-y-auto ">
+    <div className="flex-1  h-full min-h-screen overflow-y-auto  ">
+      <div className="h-full ">
         <Outlet />
       </div>
     </div>

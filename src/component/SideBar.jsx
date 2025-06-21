@@ -9,7 +9,7 @@ import { FaHistory } from "react-icons/fa";
 import { MdOutlinePlaylistPlay } from "react-icons/md";
 import { MdOutlineVideoLibrary } from "react-icons/md";
 import { RiGraduationCapFill } from "react-icons/ri";
-
+import { Link } from "react-router";
 
 const SideBar=()=>{
   const isMenuOpen = useSelector((store)=>store.menu.isOpen)
@@ -19,11 +19,11 @@ const SideBar=()=>{
 if(!isMenuOpen) return null
 
     return(
-       <div className="px-3  shadow-2xl w-60 py-6 h-screen">
+       <div className="px-3  shadow-2xl w-60 py-6 h-screen ">
         <ul className="mx-3 items-center justify-center text-left leading-relaxed text-gray-700 ">
             <div className="flex gap-2 mb-3 items-center">
             <IoMdHome  size={20}/>
-             <li > Home </li>
+            <Link to="/"><li > Home </li></Link> 
             </div>
             <div className="flex gap-2 mb-3 items-center ">
             <SiYoutubeshorts  size={20}/>
