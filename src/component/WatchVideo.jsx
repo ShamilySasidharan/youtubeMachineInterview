@@ -3,31 +3,52 @@ import { useDispatch, useSelector } from 'react-redux'
 import { closeMenu } from './utils/menuSlice'
 import { useSearchParams } from 'react-router'
 import CommentsContainer from './CommentsContainer'
+import LiveChat from './LiveChat'
 
 const WatchVideo = () => {
-  
+
   const dispatch = useDispatch()
   const [searchParams] = useSearchParams()
   // const clip = searchParams.get("v")
   // console.log(clip)
 
-  useEffect(()=>{
+  useEffect(() => {
     dispatch(closeMenu())
   })
   return (
-    <div className='flex flex-col p-1 min-h-screen   overflow-auto'>
-      {/* watch video  */}
-      <div className='rounded-md bg-black xl:w-[75%]  '>
-      <iframe width="" height="" className='w-[500px] h-96 my-2 mx-auto xl:w-full xl:min-h-[70vh] rounded-md md:min-w-[798px]' src={"https://www.youtube.com/embed/" + searchParams.get("v")} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+    <div className="flex flex-col min-h-screen p-4 bg-white">
+      {/* Container */}
+      <div className="w-full max-w-7xl mx-auto">
+  
+        {/* Video + Live Chat */}
+        <div className="flex flex-col xl:flex-row gap-4">
+          {/* Video Section */}
+          <div className="w-full xl:w-[75%] bg-black rounded-md">
+            <iframe
+              className="w-full h-[250px] sm:h-[400px] xl:h-[70vh] rounded-md"
+              src={`https://www.youtube.com/embed/${searchParams.get("v")}`}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+  
+          {/* Live Chat */}
+          <div className="w-full xl:w-[25%]">
+            <LiveChat />
+          </div>
+        </div>
+  
+        {/* Comments */}
+        <div className="mt-4 bg-gray-100 rounded-md overflow-auto">
+          <CommentsContainer />
+        </div>
+  
       </div>
-    
-     {/* comment section - nested comments */}
-     <div className='p-5  xl:w-[75%] rounded-md   max-h-[500px] overflow-y-auto bg-white' >
-     <CommentsContainer />
-     </div>
-    
     </div>
-  )
+  );
+  
 }
 
 export default WatchVideo

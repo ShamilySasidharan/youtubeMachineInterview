@@ -41,7 +41,7 @@ const VideoContainer = () => {
 
     return (
        
-        <div className="h-full overflow-y-auto px-4 justify-center flex flex-wrap">
+        <div className="h-full overflow-y-auto px-4 justify-center flex flex-wrap  ">
             {/* ADDING THE CONDITIONAL RENDERING TO SOLVE THE ERROR FOR UNDFINED DATA */}
 
             {/* HOC FOR LEARNING */}

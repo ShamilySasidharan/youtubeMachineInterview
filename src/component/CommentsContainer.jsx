@@ -145,9 +145,12 @@ const CommentList = ({ comments }) => {
 
   const CommentsContainer = () => {
     return (
-      <div className="w-full max-w-[1200px] mx-auto px-2 py-2 h-full overflow-y-auto ">
+      <div className="w-full max-w-[1200px] mx-auto px-2 py-2  overflow-y-auto min-h-screen">
         <h1 className="text-lg md:text-xl font-bold mb-2">Comments</h1>
+        <div className="max-h-[75vh] overflow-y-auto pr-2">
         <CommentList comments={commentsData} />
+        </div>
+       
       </div>
     );
   };
