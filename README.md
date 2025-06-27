@@ -2,7 +2,8 @@
 # 📺 YouTube Clone
 
 > ⚠️ **Note:** This project is created for **learning and study purposes**.
-> The auto search suggestion works if you add the CORS extensiion in the browser otherwise it will not as i dont intend to create a backend to resolve the issue right now.
+> All thanks to Namaste React and Akshay Saini
+> The auto search suggestion works if you add the CORS extension in the browser otherwise it will not as i dont intend to create a backend to resolve the issue right now.
 
 A fully responsive YouTube clone built using **React**, **Redux**, and **Tailwind CSS**, with core features like video browsing, watching, live chat simulation, nested comments, and smart search suggestions.
 
