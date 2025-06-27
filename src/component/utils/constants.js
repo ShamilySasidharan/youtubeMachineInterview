@@ -6,6 +6,8 @@
 
 const API_KEY = 'AIzaSyBdfPHWry0FXUKNY0etgJSPCcC_XrOvOUw'
 
+// const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
+
 export const YOUTUBE_API = 'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key='+ API_KEY
 
 
@@ -28,9 +30,11 @@ export function isPrime(num) {
     }
     return num - 1;
   }
-  
+
 
   export const YOUTUBE_SEARCHSUGGESTIONS_API = "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q="
+  
+  
   var nameList = [
     'Time', 'Past', 'Future', 'Dev',
     'Fly', 'Flying', 'Soar', 'Soaring', 'Power', 'Falling',
